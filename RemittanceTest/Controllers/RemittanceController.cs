@@ -25,15 +25,15 @@ namespace RemittanceTest.Controllers
             // TODO: 3. 根據 Service 回傳的結果，回傳相對應的 HTTP 狀態碼 (Ok / BadRequest / NotFound)
             if (result.IsSuccess)
             {
-                return Ok(result.Message);
+                return Ok(new { result.Message });
             }
             else if (result.Message == "查無此資料")
             {
-                return NotFound(result.Message);
+                return NotFound(new { result.Message });
             }
             else
             {
-                return BadRequest(result.Message);
+                return BadRequest(new { result.Message });
             }
         }
     }
