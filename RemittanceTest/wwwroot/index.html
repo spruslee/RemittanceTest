@@ -68,12 +68,11 @@
 
                         const result = await response.json();
 
-                        if (result.success) {
+                        if (result.message == "取消成功") {
                             target.status = 9;
-                            alert('交易已取消');
-                        } else {
-                            alert(result.message || '取消失敗');
                         }
+                        alert(result.message);
+
                     } catch (error) {
                         console.error('取消交易失敗:', error);
                         alert('系統忙碌中，取消交易失敗');
