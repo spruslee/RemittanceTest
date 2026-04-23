@@ -1,4 +1,4 @@
-@RemittanceTest_HostAddress = http://localhost:5000
+@RemittanceTest_HostAddress = http://localhost:5062
 
 ### 取得匯款清單
 GET {{RemittanceTest_HostAddress}}/api/remittance
